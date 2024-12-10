@@ -28,6 +28,24 @@ struct ContentView: View {
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }
+                
+                NavigationLink(destination: CountView()) {
+                    Text("Rating Screen")
+                        .frame(width: 120, height: 20)
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                
+                NavigationLink(destination: ToDoView()){
+                    Text("ToDo Screen")
+                        .frame(width: 120, height: 20)
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
             }
             .navigationTitle("Main Screen")
             .navigationBarBackButtonHidden(true)
