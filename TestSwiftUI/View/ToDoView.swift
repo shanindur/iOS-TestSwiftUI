@@ -14,32 +14,37 @@ struct ToDoView: View {
     @Query private var tasks: [Task]
     
     var body: some View {
-        
-        Text("Tap on this button to add Task")
-        Button("Add Task") {
-            addTask()
-        }
-        
-        List {
-            ForEach(tasks) { task in
-                HStack{
-                    Text(task.name)
-                    Spacer()
-                    Button{
-                        updateTask(task)
-                    }label: {
-                        Image(systemName: "arrow.triangle.2.circlepath")
+        NavigationStack{
+            Spacer()
+            VStack{
+                Text("Tap on this button to add Task")
+                Button("Add Task") {
+                    addTask()
+                }
+            }
+            
+            List {
+                ForEach(tasks) { task in
+                    HStack{
+                        Text(task.name)
+                        Spacer()
+                        Button{
+                            updateTask(task)
+                        }label: {
+                            Image(systemName: "arrow.triangle.2.circlepath")
+                        }
+                    }
+                    
+                }
+                .onDelete{ indexes in
+                    for index in indexes {
+                        deleteTask(tasks[index])
                     }
                 }
-                
             }
-            .onDelete{ indexes in
-                for index in indexes {
-                    deleteTask(tasks[index])
-                }
-            }
+            .padding()
         }
-        .padding()
+        .navigationTitle("To Do")
     }
     
     func updateTask(_ task:Task) {

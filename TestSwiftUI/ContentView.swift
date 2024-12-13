@@ -12,7 +12,7 @@ struct ContentView: View {
         NavigationStack {
             VStack {
                 NavigationLink(destination: SlideView()) {
-                    Text("Slide Screen")
+                    Text("Slide")
                         .frame(width: 120, height: 20)
                         .padding()
                         .background(Color.blue)
@@ -21,7 +21,7 @@ struct ContentView: View {
                 }
                 
                 NavigationLink(destination: AlbumView()) {
-                    Text("Album Screen")
+                    Text("Album")
                         .frame(width: 120, height: 20)
                         .padding()
                         .background(Color.blue)
@@ -30,7 +30,7 @@ struct ContentView: View {
                 }
                 
                 NavigationLink(destination: CountView()) {
-                    Text("Rating Screen")
+                    Text("Rating")
                         .frame(width: 120, height: 20)
                         .padding()
                         .background(Color.blue)
@@ -39,7 +39,16 @@ struct ContentView: View {
                 }
                 
                 NavigationLink(destination: ToDoView()){
-                    Text("ToDo Screen")
+                    Text("Task List")
+                        .frame(width: 120, height: 20)
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                
+                NavigationLink(destination: HealthAppView()){
+                    Text("Health App")
                         .frame(width: 120, height: 20)
                         .padding()
                         .background(Color.blue)

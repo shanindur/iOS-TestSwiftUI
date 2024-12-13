@@ -48,7 +48,7 @@ struct SlideView: View {
             }
             .padding()
         }
-        .navigationTitle("Slide Screen")
+        .navigationTitle("Slide")
     }
 }
 
