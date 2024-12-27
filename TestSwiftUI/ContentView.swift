@@ -55,6 +55,24 @@ struct ContentView: View {
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }
+                
+                NavigationLink(destination: ChartView()){
+                    Text("Chart")
+                        .frame(width: 120, height: 20)
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                
+                NavigationLink(destination: SideMenu()){
+                    Text("SideMenu")
+                        .frame(width: 120, height: 20)
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
             }
             .navigationTitle("Main Screen")
             .navigationBarBackButtonHidden(true)
